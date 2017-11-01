@@ -1,2 +1,2 @@
 # Python
-笔记
+https://www.python.org/doc/versions/
