@@ -1,0 +1,15 @@
+# python 核心编程
+chap5 GUI( Graphical User Interface)
+
+# 模块
+python中 模块可以作为数据。而程序本身就被组织在模块中。
+Lisp中，代码是恨容易使用Lisp解析的。数据？程序？融为一体
+Emacs中，它是可以自定制的。
+
+
+访问名字空间字典
+module2.__dic__.keys()
+
+
+sys.path
+
