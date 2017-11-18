@@ -1,0 +1,58 @@
+纯文本文件转为HTML
+
+### 本文要说的
+
+- 问题的背景
+
+- 转换规则
+
+- 如何使用本程序
+
+- 程序实现思路与细节
+
+### 1 问题的背景
+
+我在github的主页都是静态html文件，每次写东西我都得手写html，要添加各种标签，很麻烦。
+没办法，我的文件是用浏览器展示的，必须要html文件才行。于是不得不思考一个问题——是否可以用程序
+实现纯文本到HTML文件的自动转化？当然可以，有很多工具，如Markdown。
+那么，如果自己来写这个程序，要怎么写？
+
+### 2 转换规则
+
+我参照的是《Python基础教程》(https://book.douban.com/subject/4866934/)，第21章 Instant Markup。
+
+### 我实现了哪些规则呢？
+
+- 文件的第一行是heading
+
+- ## ### #### 对应 h2 h3 h4
+
+- 析取列表项
+
+- *强调过滤器*(** ** 包括的内容将被强调)
+
+- %高亮显示% (%% %% 包括的内容高亮显示)
+
+- 生成超链接 (正则表达式过滤器)
+
+### 3 如何使用此程序
+
+程序使用python语言，包括四个模块：util.py, handlers.py, rules.py, markup.py。
+我正在写的这篇文档就是可以使用本程序转化的(因为我遵循了我约定的规则)，
+把本文件(PlainText2HTML.txt)与模块放在同一文件夹，在cmd中进入所在文件夹，运行：
+python markup.py < PlainText2HTML.txt > out.html
+结果文件就是out.html，使用浏览器打开查看效果。进一步明白规则后，就可以自己使用这些规则
+写文档然后方便地转化为HTML。(注意：每个部分之间都有空行！)
+
+### 4 程序实现思路与细节
+
+读入纯文本文件，作为块(block)保存在内存list中，(这些块被空行分割出来)；
+逐个处理块，程序解析器(Parser)中携带很多过滤器(Filter)和规则处理器(Rules)，每个块
+先通过所有过滤器(包括强调过滤器，高亮显示过滤，超链接过滤等)，这个块从过滤器出来后再
+逐一进入规则处理器(依次为ListRule, ListItemRule, TitleRule, Heading5Rule, Heading4Rule,
+Heading3Rule, Heading2Rule, HeadingRule, ParagraphRule)， 规则一旦匹配(condition method)，
+即调用该规则的处理方法(action method)，值得注意的是Handler类的灵活性，它可以根据该规则
+对应的type来调用相应的start, end方法(这也是较难理解的一部分)。另外，正则表达式部分也是
+不好理解的部分。
+
+%*xuef 2017-11-19*% *(有兴趣的欢迎与我讨论)*
