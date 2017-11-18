@@ -1,0 +1,69 @@
+# 内置工具
+内置函数 库模块
+
+dir([])
+dir({})
+dir(sys.stdin) #文件属性
+dir(sys) # 模块的属性
+
+type(sys.version)
+
+1 sys(python 系统)
+sys.path
+
+sys.modules
+
+sys.platform
+
+sys.argv
+
+sys.stdin
+sys.stdout(print是输出到stdout的，默认是控制台，可以输出重定向 sys.stdout = open("log.out", 'w'))
+sys.stderr
+
+2 内置函数（builtin）
+dir(__builtins__)
+
+## 转换 数字和比较
+hex(1000) # 16进制
+oct(1000) # 8进制
+complex(1000)
+long(1000)
+
+### 字符与十进制值的转换
+chr(64)
+ord('@')
+
+strlist = map(chr, (66, 67, 68))
+string.join(strlist, '')
+
+### cmp
+min
+max
+sort
+
+list("hello")
+tuple("hello")
+tuple([2,3,4])
+
+3 属性操作函数(用于模块，类，实例)
+hasattr
+getattr
+setattr
+delattr
+
+4 执行程序（创建，操作和调用python代码）
+exec
+execfile
+eval
+apply
+
+# 库模块
+1 string模块
+
+
+
+
+
+
+
