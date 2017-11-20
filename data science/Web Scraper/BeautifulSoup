@@ -1,0 +1,55 @@
+# what it can do
+BeautifulSoup tries to make sense of the nonsensical; 
+it helps format and organize the messy web by fixing bad HTML and presenting us with
+easily-traversible Python objects representing XML structures.
+
+# Installing BeautifulSoup
+Because the BeautifulSoup library is not a default Python library, it must be installed. 
+
+我是怎么安装BeautifulSoup的
+我们首先要清楚，当 from bs4 import BeautifulSoup 时，python做了什么：
+python根据sys.path包含的路径去查找模块，所以我直接把模块包丢进其中某路径。
+不过还是有很多地方不明白。如必须from bs4 import BeautifulSoup 才可以，直接import BeautifulSoup会出错。
+详细解析参见《Learning Python》
+
+Previously, we’ve called  bsObj.tagName in order to get the first occurrence of that tag on the page. 
+Now, we’re calling bsObj.findAll(tagName, tagAttributes) in order to get a list of all of the tags on the
+page, rather than just the first.
+
+bsObj = BeautifulSoup(html)
+nameList = bsObj.findAll("span", {"class" : "green"})
+for name in nameList:
+    print(name.get_text())
+
+# When to get_text() and When to Preserve Tags
+.get_text() strips all tags from the document you are working with and returns a string containing the text
+only. For example, if you are working with a large block of text that contains many hyperlinks, paragraphs,
+and other tags, all those will be stripped away and you’ll be left with a tagless block of text.
+Keep in mind that it’s much easier to find what you’re looking for in a BeautifulSoup object than in a block
+of text. Calling  .get_text() should always be the last thing you do, immediately before you print, store, or
+manipulate your final data. In general, you should try to preserve the tag structure of a document as long as
+possible.
+
+
+The two functions are extremely similar, as evidenced by their definitions in the
+BeautifulSoup documentation:
+findAll(tag, attributes, recursive, text, limit, keywords)
+find(tag, attributes, recursive, text, keywords)
+
+.findAll({"h1","h2","h3","h4","h5","h6"})
+The  attributes argument takes a Python dictionary of attributes and matches tags that
+contain any one of those attributes. For example, the following function would return both
+the green and red  span tags in the HTML document:
+.findAll("span", {"class":"green", "class":"red"})
+
+The  recursive argument is a boolean. How deeply into the document do you want to go?
+If  recursion is set to  True , the  findAll function looks into children, and children’s
+children, for tags that match your parameters. 
+
+nameList = bsObj.findAll(text="the prince")
+print(len(nameList))
+
+
+
+
+
