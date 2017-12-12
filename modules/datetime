@@ -1,0 +1,23 @@
+# 日期和时间处理
+在支持日期和时间算法的同时，这个模块的实现重点是为了输出格式化和处理而进行的有效的属性抽取。
+>>> import datetime
+>>> dir(datetime)
+['MAXYEAR', 'MINYEAR', '__doc__', '__name__', '__package__', 'date', 'datetime', 'datetime_CAPI', 'time', 'timedelta', 'tzinfo']
+>>> from datetime import date
+>>> date.today()
+datetime.date(2017, 12, 12)
+>>> from datetime import time
+>>> tm = time(23, 20, 35)
+>>> print tm
+23:20:35
+>>> from datetime import datetime
+>>> dt = datetime.now()
+>>> dt
+datetime.datetime(2017, 12, 12, 19, 1, 43, 7000)
+>>> print dt.strftime('%a, %b %d %Y %H:%M')
+Tue, Dec 12 2017 19:01
+
+???
+本地时间与全球统一时间戳 之间的转换
+timestamp()
+fromtimestamp()
