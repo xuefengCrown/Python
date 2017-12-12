@@ -1,0 +1,15 @@
+# 自定义函数
+
+def f_name():
+  ...
+
+## 默认参数(必须放在末尾)
+
+## 关键字参数
+func(x=1, y=2)
+
+## 传递函数
+
+## lambda(与filter reduce结合使用)
+f = lambda x : x*x
+f(3)
