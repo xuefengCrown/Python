@@ -1,0 +1,12 @@
+So far, the examples in the book have covered single static pages, with somewhat artificial
+canned examples. In this chapter, we’ll start looking at some real-world problems, with
+scrapers traversing multiple pages and even multiple sites.
+
+Web crawlers are called such because they crawl across the Web. At their core is an
+element of recursion. They must retrieve page contents for a URL, examine that page for
+another URL, and retrieve that page, ad infinitum.
+Beware, however: just because you can crawl the Web doesn’t mean that you always
+should. The scrapers used in previous examples work great in situations where all the data
+you need is on a single page. With web crawlers, you must be extremely conscientious of
+how much bandwidth you are using and make every effort to determine if there’s a way to
+make the target server’s load easier.
