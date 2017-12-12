@@ -5,3 +5,4 @@
 --文件：物理上的组织方式 math.py
 --模块：逻辑上的组织方式 math
 import math
+from Module import ModuleElement 
