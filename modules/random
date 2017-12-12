@@ -2,3 +2,19 @@
 from random import randint
 randint(0, 100) # not include 100
 
+random.choice(['c', 'java', 'python', 'lisp'])
+
+random.randrange(1, 10, 2)
+
+random.random()
+
+random.uniform(5, 9)
+
+>>> random.sample(range(100), 10)
+[95, 94, 57, 51, 40, 58, 9, 38, 78, 62]
+
+# shuffle 打乱列表，可以用于洗牌
+>>> cards = range(1, 11)
+>>> random.shuffle(cards)
+>>> cards
+[10, 7, 2, 1, 9, 6, 5, 4, 3, 8]
