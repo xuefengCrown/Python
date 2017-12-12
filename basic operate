@@ -1,0 +1,16 @@
+# 基本操作（详细参加文档）
+
+python2
+
+## 输入输出
+str = 'xuef'
+print str
+
+>>> x = int(input('your age:'))
+
+## comment
+#
+
+## style
+
+
