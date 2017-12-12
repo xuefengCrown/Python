@@ -1,0 +1,14 @@
+https://pip.pypa.io/en/latest/installing/
+
+Installation
+Do I need to install pip?
+pip is already installed if you are using Python 2 >=2.7.9 or Python 3 >=3.4 downloaded from python.org 
+or if you are working in a Virtual Environment created by virtualenv or pyvenv. Just make sure to upgrade pip.
+
+## 我的python版本是 2.7
+pip已经安装
+path: C:\Python27\Scripts
+将其加入环境变量即可
+
+## 使用pip
+pip install numpy
