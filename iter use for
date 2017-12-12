@@ -1,0 +1,15 @@
+# 使用for循环
+
+for iter_var in iterable_object
+  suite_to_repeat
+
+iterable_object
+...string
+...list
+...tuple
+...dictionary
+...file
+
+# 列表解析
+>>> [i for i in range(1, 10) if(i%2==0)]
+[2, 4, 6, 8]
