@@ -1,0 +1,14 @@
+# 与操作系统交互
+import os
+os.getcwd()
+
+>>> import os
+>>> os.getcwd()
+'C:\\Python27'
+
+# 通过path修改
+path = r"c:\code_dxf"
+os.chdir(path)
+
+rename # 文件重命名
+remove # 删除文件
