@@ -1,0 +1,8 @@
+# 包
+一个有层次的文件目录结构
+
+import dir_a.dir_b.module_c
+dir_a.dir_b.module_c.func1()
+
+from dir_a.dir_b.module_c import func1
+func1()
