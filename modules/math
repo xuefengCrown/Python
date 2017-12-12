@@ -1,6 +1,7 @@
 # 解决一些高等数学问题，需要用到 math 库
 
 import math
-help(math)
+dir(math)
+help(math.ceil)
 
 
