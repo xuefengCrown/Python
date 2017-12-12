@@ -1,0 +1,4 @@
+
+from random import randint
+randint(0, 100) # not include 100
+
