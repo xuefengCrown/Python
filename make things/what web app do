@@ -1,0 +1,15 @@
+# 对数据做些什么
+得看 弗里德曼的《统计学》
+缺的是想法，是对世界的深刻洞识
+Although the raison d’être of many modern web applications is to take existing data and
+format it in a more appealing（吸引人的） way, I would argue that this isn’t very interesting thing to do
+in most instances. If you’re using an API as your only data source, the best you can do is
+merely copy someone else’s database that already exists, and which is, essentially, already
+published. What can be far more interesting is to take two or more data sources and
+combine them in a novel way, or use an API as a tool to look at scraped data from a new
+perspective.
+
+Let’s look at one example of how data from APIs can be used in conjunction with web
+scraping: to see which parts of the world contribute the most to Wikipedia.
+
+
