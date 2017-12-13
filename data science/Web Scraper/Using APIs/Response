@@ -1,0 +1,17 @@
+As you saw in the FreeGeoIP example at the beginning of the chapter, an important feature
+of APIs is that they have well-formatted responses. The most common types of response
+formatting are eXtensible Markup Language (XML) and JavaScript Object Notation (JSON).
+
+In recent years, JSON has become vastly more popular than XML for a couple of major
+reasons. First, JSON files are generally smaller than well-designed XML files. Compare,
+for example, the XML data:
+<user>
+  <firstname>Ryan</firstname>
+  <lastname>Mitchell</lastname>
+  <username>Kludgist</username>
+</user>
+
+which clocks in at 98 characters, and the same data in JSON:
+{"user":{"firstname":"Ryan","lastname":"Mitchell","username":"Kludgist"}}
+
+
