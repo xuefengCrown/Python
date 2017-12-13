@@ -22,3 +22,7 @@ The output of which is:
 {'number': 1}
 3
 pear
+
+Line 1 is a list of dictionary objects, line 2 is a dictionary object, line 3 is an integer (the
+sum of the integers accessed in the dictionaries), and line 4 is a string.
+
