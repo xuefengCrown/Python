@@ -1,0 +1,72 @@
+# 流程
+
+1. 如何获得单个静态网页的links(或其他你感兴趣的内容)
+爬虫基本原理
+regular expression（master rex）
+
+2. Crawling an Entire Site
+So when might crawling an entire website be useful and when might it actually be
+harmful? Web scrapers that traverse an entire site are good for many things, including:
+## Generating a site map
+## Gathering data
+The general approach to an exhaustive site crawl is to start with a top-level page (such as
+the home page), and search for a list of all internal links on that page. Every one of those
+links is then crawled, and additional lists of links are found on each one of them,
+triggering another round of crawling.
+Clearly this is a situation that can blow up very quickly. If every page has 10 internal
+links, and a website is five pages deep (a fairly typical depth for a medium-size website),
+then the number of pages you need to crawl is  , or 100,000 pages, before you can be
+sure that you’ve exhaustively covered the website. Strangely enough, while “5 pages deep
+and 10 internal links per page” are fairly typical dimensions for a website, there are very
+few websites with 100,000 or more pages. The reason, of course, is that the vast majority
+of internal links are duplicates.
+In order to avoid crawling the same page twice, it is extremely important that all internal
+links discovered are formatted consistently, and kept in a running list for easy lookups,
+while the program is running. Only links that are “new” should be crawled and searched
+for additional links:
+
+3. Collecting Data Across an Entire Site
+
+4. Crawling Across the Internet
+In all seriousness, web crawlers are at the heart of what drives many modern web
+technologies, and you don’t necessarily need a large data warehouse to use them. In order
+to do any cross-domain data analysis, you do need to build crawlers that can interpret and
+store data across the myriad of different pages on the Internet.
+Just like in the previous example, the web crawlers we are going to build will follow links
+from page to page, building out a map of the Web. But this time, they will not ignore
+external links; they will follow them. For an extra challenge, we’ll see if we can record
+some kind of information about each page as we move through it. This will be harder than
+working with a single domain as we did before — different websites have completely
+different layouts. This means we will have to be very flexible in the kind of information
+we’re looking for and how we’re looking for it.
+
+Before you start writing a crawler that simply follows all outbound links willy nilly, you
+should ask yourself a few questions:
+What data am I trying to gather? Can this be accomplished by scraping just a few
+predefined websites (almost always the easier option), or does my crawler need to be
+able to discover new websites I might not know about?
+When my crawler reaches a particular website, will it immediately follow the next
+outbound link to a new website, or will it stick around for a while and drill down into
+the current website?
+Are there any conditions under which I would not want to scrape a particular site? Am
+I interested in non-English content?
+How am I protecting myself against legal action if my web crawler catches the
+attention of a webmaster on one of the sites it runs across? (Check out Appendix C for
+more information on this subject.)
+
+
+\*(.+?)\* 这个正则表达式中的.+?什么意思
+. 表示任意字符 (有些情况下不包括换行), + 修饰前面一个字符, 限定数量是一个或者多个, 
+但默认会尽可能匹配更长的字符串 (贪婪匹配), + 后面再来个 ? 就表示用非贪婪匹配.
+举个例子: 假设字符串 "*abc*abc*", 如果有 ?, 那么匹配到的就是 *abc*, 
+如果没有, 匹配到的就是整个字符串, 因为 . 也可以匹配到 *.
+
+
+
+
+
+
+
+
+
+
