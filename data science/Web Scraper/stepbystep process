@@ -61,7 +61,10 @@ more information on this subject.)
 举个例子: 假设字符串 "*abc*abc*", 如果有 ?, 那么匹配到的就是 *abc*, 
 如果没有, 匹配到的就是整个字符串, 因为 . 也可以匹配到 *.
 
+5. parse data
+web API
 
+6. store data
 
 
 
