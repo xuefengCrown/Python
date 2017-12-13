@@ -1,0 +1,24 @@
+The JSON parsing library used is part of Python’s core library. Just type in import json at
+the top, and you’re all set! Unlike many languages that might parse JSON into a special
+JSON object or JSON node, Python uses a more flexible approach and turns JSON objects
+into dictionaries, JSON arrays into lists, JSON strings into strings, and so forth. In this
+way, it makes it extremely easy to access and manipulate values stored in JSON.
+The following gives a quick demonstration of how Python’s JSON library handles the
+different values that might be encountered in a JSON string:
+
+import json
+jsonString = '{"arrayOfNums":[{"number":0},{"number":1},{"number":2}],
+               "arrayOfFruits":[{"fruit":"apple"},{"fruit":"banana"},
+                                {"fruit":"pear"}]}'
+jsonObj = json.loads(jsonString)
+print(jsonObj.get("arrayOfNums"))
+print(jsonObj.get("arrayOfNums")[1])
+print(jsonObj.get("arrayOfNums")[1].get("number")+
+      jsonObj.get("arrayOfNums")[2].get("number"))
+print(jsonObj.get("arrayOfFruits")[2].get("fruit"))
+
+The output of which is:
+[{'number': 0}, {'number': 1}, {'number': 2}]
+{'number': 1}
+3
+pear
