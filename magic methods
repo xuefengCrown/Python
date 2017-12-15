@@ -1,0 +1,15 @@
+# derek: learn to program-10
+
+__init__
+Animal.__init__
+
+# 类似 java的toString()
+__str__
+super().__str__
+
+type(obj).__name__
+
+##
+——add——
+__eq__
+...
