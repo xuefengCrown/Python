@@ -1,0 +1,15 @@
+# 绘他妈的图
+import matplotlib.pyplot as plt
+
+## 设定数据 
+x_values = unrate["DATE"].head(12)
+y_values = unrate["VALUE"].head(12)
+
+## x-axis 旋转90°
+plt.xticks(rotation=90)
+plt.plot(x_values, y_values)
+plt.xlabel("Month")
+plt.ylabel("Unemployment Rate")
+plt.title("Monthly Unemployment Trends, 1948")
+plt.show()
+
