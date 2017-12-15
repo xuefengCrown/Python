@@ -14,3 +14,23 @@ plt.ylabel("Unemployment Rate")
 plt.title("Monthly Unemployment Trends, 1948")
 plt.show()
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+import pandas as pd
+import matplotlib.pyplot as plt
+
+women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
+
+x_values = women_degrees["Year"]
+y_values = women_degrees["Biology"]
+y_values_men = [(100-per) for per in y_values]
+#plt.xlabel("Year")
+#plt.ylabel("Biology")
+women_line = plt.plot(x_values, y_values, label="Women")
+men_line = plt.plot(x_values, y_values_men, label="Men")
+plt.setp(women_line, color='b')
+plt.setp(men_line, color='g')
+plt.legend(loc="upper right")
+
+plt.title("Percentage of Biology Degrees Awarded By Gender")
+plt.show()
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
