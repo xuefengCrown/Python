@@ -1,0 +1,11 @@
+
+try:
+  myfile = open("data1.txt", encoding='utf-8')
+except FileNotFoundError as ex:
+  print("file not found")
+  print(ex.args)
+else:
+  print("file: ", myfile.read())
+finally:
+  myfile.close()
+  print("finished work with file")
