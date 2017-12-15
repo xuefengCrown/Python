@@ -1,4 +1,5 @@
 # 绘他妈的图
+# API: http://matplotlib.org/api/pyplot_api.html
 import matplotlib.pyplot as plt
 
 ## 设定数据 
