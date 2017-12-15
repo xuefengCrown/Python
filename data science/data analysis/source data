@@ -1,0 +1,10 @@
+# 数据源
+# National Center for Education Statistics
+https://nces.ed.gov/programs/digest/2013menu_tables.asp
+The Department of Education Statistics releases a data set annually containing the percentage of 
+bachelor's degrees granted to women from 1970 to 2012. The data set is broken up into 17 categories 
+of degrees, with each column as a separate category.
+
+# 劳动力市场 就业率 失业率
+# United States Bureau of Labor Statistics
+https://www.stlouisfed.org/
