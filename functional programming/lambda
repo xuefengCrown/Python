@@ -1,0 +1,60 @@
+# learn2program 12
+
+## function as objects
+## function annotation 
+## lambda anonymous func
+## map
+## filter
+## reduce
+
+## function as objects
+### 函数可以赋值给变量
+
+### 函数作为返回值
+def adder(num):
+  def add_num(value):
+    return num + value
+  return add_num
+add1 = adder(1)
+add3 = adder(3)
+print add1(7)
+
+### 函数作为obj，当然可以放在list里
+
+## function annotation 
+## lambda anonymous func
+sum = lambda x, y : x + y
+can_vote = lambda age : True if age>=18 else False
+
+### need python3
+attack = {'quick': (lambda: print("quick attack")),
+          'power': (lambda: print("power attack")),
+          'miss': (lambda: print("missed attack"))}
+attackKey = random.choice(list(attack.keys()))
+attack[attackKey]()
+
+## map
+l = map((lambda x,y: x+y), range(1,11), range(100,110))
+print l
+
+## filter
+### 一个简单的过滤器
+def xuef_filter(ori_list, predicate):
+    res_list = []
+    for ele in ori_list:
+        if predicate(ele):
+            res_list.append(ele)
+    return res_list
+
+def is_odd(num):
+    if num%2 == 0:
+        return False
+    return True
+#print is_odd(9)
+print xuef_filter(list(range(2,20)), is_odd)
+
+## reduce
+from functools import reduce
+print reduce((lambda x,y: x+y), range(1, 101))
+
+
