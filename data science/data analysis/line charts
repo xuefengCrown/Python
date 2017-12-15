@@ -1,0 +1,20 @@
+# why line charts?
+使用表来组织数据，使得使用row & column来锁定单个数据是容易的。
+但是，不利于发现数据之间的模式。
+So far, we've mostly been manipulating and working with data that are represented as tables. 
+Microsoft Excel, the pandas library in Python, and the CSV file format for datasets were all 
+developed around this representation. Because a table neatly organizes values into rows and columns, 
+we can easily look up specific values at the intersection of a row value and a column value. 
+Unfortunately, it's very difficult to explore a dataset to uncover patterns when it's represented 
+as a table, especially when that dataset contains many values. 
+We need a different representation of data that can help us identify patterns more easily.
+
+In this mission, we'll learn the basics of data visualization, a discipline that focuses on 
+the visual representation of data.
+As humans, our brains have evolved to develop powerful visual processing capabilities. 
+We can quickly find patterns in the visual information we encounter, which was incredibly 
+important from a survivability standpoint. Unfortunately, when data is represented as 
+tables of values, we can't really take advantage of our visual pattern matching capabilities. 
+This is because our ability to quickly process symbolic values (like numbers and words) is very poor. 
+Data visualization focuses on transforming data from table representations visual ones.
+
