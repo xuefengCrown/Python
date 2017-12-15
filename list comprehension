@@ -1,0 +1,20 @@
+# 列表表达式
+
+## generate a card
+生成一副牌
+>>> colors = ["hearts","diamond","spade","club"]
+>>> numbers = range(1, 14)
+>>> cards = [(color,num) for color in colors for num in numbers]
+
+## 生成50个随机数
+>>> import random
+>>> [random.randint(1, 1001) for i in range(50)]
+
+## 处理multilist
+multilist = [[1, 2, 3],
+             [4, 5, 6],
+             [7, 8, 9]]
+### 获得第2列
+col1 = [col[1] for col in multilist]
+
+top_left2right_bottom = [multilist[i][i] for i in range(len(multilist))]
