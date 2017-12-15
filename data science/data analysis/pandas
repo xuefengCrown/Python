@@ -1,0 +1,68 @@
+# 读取数据
+import pandas
+food_info = pandas.read_csv("food_info.csv") 
+# http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html
+# 设定参数，读取配置
+print(type(food_info))
+
+# 获取前n行数据
+print(food_info.head(3))
+dimensions = food_info.shape
+print(dimensions)
+num_rows = dimensions[0]
+print(num_rows)
+num_cols = dimensions[1]
+print(num_cols)
+first_twenty = food_info.head(20)
+
+# 第99行
+hundredth_row = food_info.loc[99]
+print(hundredth_row)
+
+
+# data types
+object - for representing string values.
+int - for representing integer values.
+float - for representing float values.
+datetime - for representing time values.
+bool - for representing Boolean values.
+
+# read more
+http://pandas.pydata.org/pandas-docs/stable/basics.html#dtypes
+
+
+# select multi rows
+# DataFrame containing the rows at index 3, 4, 5, and 6 returned.
+food_info.loc[3:6]
+
+# DataFrame containing the rows at index 2, 5, and 10 returned. Either of the following work.
+# Method 1
+two_five_ten = [2,5,10] 
+food_info.loc[two_five_ten]
+
+# Method 2
+food_info.loc[[2,5,10]]
+
+
+# select multi columns
+columns = ["Zinc_(mg)", "Copper_(mg)"]
+zinc_copper = food_info[columns]
+
+# Skipping the assignment.
+zinc_copper = food_info[["Zinc_(mg)", "Copper_(mg)"]]
+
+
+# practice: Select and display only the columns that use grams for measurement (that end with "(g)"). 
+# get columns and convert it to list
+columns = food_info.columns.tolist()
+
+# list contains the column names which ends in "(g)"
+gram_columns= []
+for column in columns:
+    if column.endswith("(g)"):
+        gram_columns.append(column)
+
+gram_df = food_info[gram_columns] 
+
+print(gram_df.head(3))
+
